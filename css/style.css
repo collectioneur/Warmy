@@ -23,7 +23,6 @@ body {
 
 .window {
   width: 40vw;
-  height: 700px;
   background: rgb(213,148,252);
   background: linear-gradient(63deg, rgba(213,148,252,1) 0%, rgba(148,233,213,1) 100%);
   margin: 0 auto;
@@ -42,15 +41,23 @@ body {
 .search-button {
   width: 50px;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 5px;
-  background: linear-gradient(133deg, rgba(252,140,177,0.7) 0%, rgba(206,181,242,0.7) 100%);
+  background: linear-gradient(133deg, rgba(255,54,121,1) 0%, rgba(145,69,255,1) 100%);;
+  transition: all 0.3s ease-in-out;
 }
 
+.search-button:hover {
+  /*background: linear-gradient(133deg, rgba(255,54,121,1) 0%, rgba(145,69,255,1) 100%);*/
+  border-radius: 15px;
+}
+
+.search-button:active {
+  transform: scale(0.7);
+}
 .search-icon {
-  width: 40px;
-  height: 40px;
-  opacity: 0.7;
+  width: 30px;
+  height: 30px;
 }
 
 .center {
@@ -79,12 +86,15 @@ body {
 }
 
 .bottom {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
+.center, .bottom {
+  display: none;
+}
 .parameter p {
   font-size: 20px;
   color: white;
@@ -103,4 +113,12 @@ footer {
   font-size: 30px;
   background-image: linear-gradient(63deg, rgba(213,148,252,1) 0%, rgba(148,233,213,1) 100%);
   background-clip: text;
+}
+
+.error {
+  text-align: center;
+  color: #444444;
+  font-size: 20px;
+  text-shadow: 0px 0px 20px #111b1f;
+  display: none;
 }
