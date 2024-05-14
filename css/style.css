@@ -22,13 +22,78 @@ body {
 }
 
 .window {
-  width: 50vw;
-  height: 500px;
+  width: 40vw;
+  height: 700px;
   background: rgb(213,148,252);
   background: linear-gradient(63deg, rgba(213,148,252,1) 0%, rgba(148,233,213,1) 100%);
   margin: 0 auto;
   border: 6px dashed white;
   border-radius: 25px;
+}
+
+.above {
+  display: flex;
+  justify-content: space-between;
+  width: 20vw;
+  margin: 20px auto;
+  align-items: center;
+}
+
+.search-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 5px;
+  background: linear-gradient(133deg, rgba(252,140,177,0.7) 0%, rgba(206,181,242,0.7) 100%);
+}
+
+.search-icon {
+  width: 40px;
+  height: 40px;
+  opacity: 0.7;
+}
+
+.center {
+  margin: 50px 0;
+}
+
+.weather-icon {
+  height: 40ex;
+  display: block;
+  margin: auto;
+}
+
+.city {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+.input-search {
+  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.bottom {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.parameter p {
+  font-size: 20px;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+  text-align: center;
+}
+
+.icon {
+  width: 15ex;
 }
 
 footer {
