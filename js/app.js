@@ -31,35 +31,35 @@ async function checkWeather(city) {
   backgroundChange(time);
   if(time == "d") {
   if (data.weather[0].main == "Clouds") {
-    weatherIcon.src = "img/cloudnsun.png";
+    weatherIcon.src = "../img/cloudnsun.png";
   } else if (data.weather[0].main == "Clear") {
-    weatherIcon.src = "img/sun.png";
+    weatherIcon.src = "../img/sun.png";
   } else if (data.weather[0].main == "Rain") {
-    weatherIcon.src = "img/rain.png";
+    weatherIcon.src = "../img/rain.png";
   } else if (data.weather[0].main == "Drizzle") {
-    weatherIcon.src = "img/rain.png";
+    weatherIcon.src = "../img/rain.png";
   } else if (data.weather[0].main == "Mist") {
-    weatherIcon.src = "img/rainnsun.png";
+    weatherIcon.src = "../img/rainnsun.png";
   } else if (data.weather[0].main == "Thunderstorm") {
-    weatherIcon.src = "img/rainnflash.png";
+    weatherIcon.src = "../img/rainnflash.png";
   } else if (data.weather[0].main == "Snow") {
-    weatherIcon.src = "img/snow.png";
+    weatherIcon.src = "../img/snow.png";
   }
   } else {
     if (data.weather[0].main == "Clouds") {
-      weatherIcon.src = "img/bigcloudnmoon.png";
+      weatherIcon.src = "../img/bigcloudnmoon.png";
     } else if (data.weather[0].main == "Clear") {
-      weatherIcon.src = "img/moon.png";
+      weatherIcon.src = "../img/moon.png";
     } else if (data.weather[0].main == "Rain") {
-      weatherIcon.src = "img/rain.png";
+      weatherIcon.src = "../img/rain.png";
     } else if (data.weather[0].main == "Drizzle") {
-      weatherIcon.src = "img/rain.png";
+      weatherIcon.src = "../img/rain.png";
     } else if (data.weather[0].main == "Mist") {
-      weatherIcon.src = "img/moonncloud.png";
+      weatherIcon.src = "../img/moonncloud.png";
     } else if (data.weather[0].main == "Thunderstorm") {
-      weatherIcon.src = "img/rainnflash.png";
+      weatherIcon.src = "../img/rainnflash.png";
     } else if (data.weather[0].main == "Snow") {
-      weatherIcon.src = "img/snow.png";
+      weatherIcon.src = "../img/snow.png";
     }
   }
 
