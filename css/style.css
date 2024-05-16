@@ -14,12 +14,29 @@ body {
   color: transparent;
   width: 30vw;
   min-width: 300px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 20px auto;
   text-align: center;
   font-size: 70px;
   background-image: linear-gradient(63deg, rgba(213,148,252,1) 0%, rgba(148,233,213,1) 100%);
   background-clip: text;
+}
 
+.slogan {
+  color: transparent;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  background-image: linear-gradient(63deg, rgba(213,148,252,1) 0%, rgba(148,233,213,1) 100%);
+  background-clip: text;
+}
+
+.description {
+  color: #a8a8a8;
+  width: 40vw;
+  margin: 0px auto;
+  min-width: 300px;
+  text-indent: -10px;
+  transition: all 0.3s ease;
 }
 
 .window {
@@ -67,7 +84,8 @@ body {
 }
 
 .weather-icon {
-  height: 40ex;
+  width: 60%;
+  max-width: 400px;
   display: block;
   margin: auto;
 }

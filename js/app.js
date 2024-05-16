@@ -87,6 +87,7 @@ function backgroundChange(time) {
 }
 
 searchBtn.addEventListener("click", () => {
+  document.querySelector(".description").style.opacity = 0;
   checkWeather(searchBox.value);
 })
 
