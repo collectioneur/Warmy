@@ -33,7 +33,7 @@ body {
 .description {
   color: #a8a8a8;
   width: 40vw;
-  margin: 0px auto;
+  margin: 0 auto;
   min-width: 300px;
   text-indent: -10px;
   transition: all 0.3s ease;
@@ -94,7 +94,7 @@ body {
   text-align: center;
   font-size: 30px;
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0 0 10px black;
 }
 
 .input-search {
@@ -102,7 +102,7 @@ body {
   width: 200px;
   height: 50px;
   font-size: 20px;
-  padding: 0px 10px;
+  padding: 0 10px;
 }
 
 .bottom {
@@ -118,7 +118,7 @@ body {
 .parameter p {
   font-size: 20px;
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0 0 10px black;
   text-align: center;
 }
 
@@ -139,7 +139,7 @@ footer {
   text-align: center;
   color: #444444;
   font-size: 20px;
-  text-shadow: 0px 0px 20px #111b1f;
+  text-shadow: 0 0 20px #111b1f;
   display: none;
 }
 

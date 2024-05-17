@@ -7,58 +7,66 @@ const searchBtn = document.querySelector(".search-button")
 const weatherIcon = document.querySelector(".weather-icon")
 let time = "d";
 let previousCity = "";
+
+
 async function checkWeather(city) {
+  /**
+   * @param document.temp
+   * @param document.humidity
+   * @param document.wind
+   * @param doucment.weather
+   */
   if(previousCity === city) return;
   previousCity = city;
   const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
-  if (response.status == 404 || response.status == 400) {
+  if (response.status === 404 || response.status === 400) {
     document.querySelector(".error").style.display = "block";
     document.querySelector(".center").style.display = "none";
     document.querySelector(".bottom").style.display = "none";
   }
   else {
-  var data = await response.json();
+  let data = await response.json();
 
    console.log(data);
 
   document.querySelector(".city").innerHTML = data.name;
   document.querySelector(".temp").innerHTML = data.main.temp + "°C";
   document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-  document.querySelector(".wind-speed").innerHTML = data.wind.speed + " km/h";
+  document.querySelector(".wind-speed").innerHTML = data.wind.speed + " m/s";
 
   time = data.weather[0].icon[2];
   backgroundChange(time);
-  if(time == "d") {
-  if (data.weather[0].main == "Clouds") {
+  if(time === "d") {
+  if (data.weather[0].main === "Clouds") {
     weatherIcon.src = "img/cloudnsun.png";
-  } else if (data.weather[0].main == "Clear") {
+  } else if (data.weather[0].main === "Clear") {
     weatherIcon.src = "img/sun.png";
-  } else if (data.weather[0].main == "Rain") {
+  } else if (data.weather[0].main === "Rain") {
     weatherIcon.src = "img/rain.png";
-  } else if (data.weather[0].main == "Drizzle") {
+  } else if (data.weather[0].main === "Drizzle") {
     weatherIcon.src = "img/rain.png";
-  } else if (data.weather[0].main == "Mist") {
+  } else if (data.weather[0].main === "Mist") {
     weatherIcon.src = "img/rainnsun.png";
-  } else if (data.weather[0].main == "Thunderstorm") {
+  } else if (data.weather[0].main === "Thunderstorm") {
     weatherIcon.src = "img/rainnflash.png";
-  } else if (data.weather[0].main == "Snow") {
+  } else if (data.weather[0].main === "Snow") {
     weatherIcon.src = "img/snow.png";
   }
   } else {
-    if (data.weather[0].main == "Clouds") {
+    if (data.weather[0].main === "Clouds") {
       weatherIcon.src = "img/bigcloudnmoon.png";
-    } else if (data.weather[0].main == "Clear") {
+    } else if (data.weather[0].main === "Clear") {
       weatherIcon.src = "img/moon.png";
-    } else if (data.weather[0].main == "Rain") {
+    } else if (data.weather[0].main === "Rain") {
       weatherIcon.src = "img/rain.png";
-    } else if (data.weather[0].main == "Drizzle") {
+    } else if (data.weather[0].main === "Drizzle") {
       weatherIcon.src = "img/rain.png";
-    } else if (data.weather[0].main == "Mist") {
+    } else if (data.weather[0].main === "Mist") {
       weatherIcon.src = "img/moonncloud.png";
-    } else if (data.weather[0].main == "Thunderstorm") {
+    } else if (data.weather[0].main === "Thunderstorm") {
       weatherIcon.src = "img/rainnflash.png";
-    } else if (data.weather[0].main == "Snow") {
+    } else if (data.weather[0].main === "Snow") {
       weatherIcon.src = "img/snow.png";
     }
   }
@@ -87,8 +95,8 @@ function backgroundChange(time) {
 }
 
 searchBtn.addEventListener("click", () => {
-  document.querySelector(".description").style.opacity = 0;
-  checkWeather(searchBox.value);
+  document.querySelector(".description").style.opacity = "0";
+  void checkWeather(searchBox.value);
 })
 
 
